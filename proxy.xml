@@ -1,0 +1,6 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<proxy>
+  <name>myproxy</name>
+  <port>8080</port>
+  <secretPassword>asdf</secretPassword>
+</proxy>
