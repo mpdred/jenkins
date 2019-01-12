@@ -6,7 +6,8 @@ FROM jenkins/jenkins:lts
 #ENV https_proxy=${http_proxy}
 
 #ENV JAVA_OPTS="-Xmx8192m -Djenkins.install.runSetupWizard=false -Dhttp.proxyHost=${proxy_url} -Dhttp.proxyPort=${proxy_port} -Dhttps.proxyHost=${proxy_url} -Dhttps.proxyPort=${proxy_port}"
-#ENV JENKINS_OPTS=" --handlerCountMax=300"
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+ENV JENKINS_OPTS=" --handlerCountMax=300"
 
 WORKDIR /var/jenkins_home
 USER jenkins

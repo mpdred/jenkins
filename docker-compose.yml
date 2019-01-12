@@ -10,11 +10,8 @@ services:
     volumes:
       - ./jenkins_home:/var/jenkins_home
     ports:
-      - 8080:80
+      - 8080:8080
       - 50000:50000
-    environment:
-      ES_JAVA_OPTS: $ES_JAVA_OPTS
-      JAVA_OPTS: $JAVA_OPTS
     networks:
       - cicd
 
