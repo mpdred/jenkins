@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+
+  cicd:
+    container_name: jenkins
+    restart: unless-stopped:0
+    build:
+      context: ./
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    ports:
+      - 8080:80
+      - 50000:50000
+    environment:
+      ES_JAVA_OPTS: $ES_JAVA_OPTS
+      JAVA_OPTS: $JAVA_OPTS
+    networks:
+      - cicd
+
+networks:
+  cicd:
+    driver: bridge

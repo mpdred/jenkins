@@ -1,0 +1,8 @@
+description-setter
+git
+ghprb
+jenkins-multijob-plugin
+rebuild
+
+scm-sync-configuration:latest
+slack
